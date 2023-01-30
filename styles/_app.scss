@@ -1,0 +1,116 @@
+@import "mediaQuery";
+
+
+@import url('https://fonts.googleapis.com/css?family=Asul:700|Chivo');
+
+body{
+  font-family: Chivo;
+  font-size: 25px;
+  line-height: 1.5;
+  background-color: #fffae2;
+  color: #221204;
+
+  @include breakpoint(800) {
+    font-size: 16px;
+  }
+
+
+}
+
+header{
+background-image: url(../images/cover.jpg);
+height: 100vh;
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+
+@include breakpoint(800) {
+  height: 75vw;
+}
+
+
+img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+}
+
+h2{
+  font-family: Asul;
+  font-size: 75px !important;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+
+  @include breakpoint(800){
+    font-size: 32px;
+  }
+
+}
+
+section{
+  display: flex;
+
+  @include breakpoint(800) {
+    display: block;
+  }
+
+}
+
+section:nth-child(odd){
+  flex-direction: row-reverse;
+}
+
+section div{
+  width: 50%;
+
+  @include breakpoint(800){
+    width: 100%;
+  }
+
+}
+
+section div.text{
+  padding: 60px;
+
+  @include breakpoint(800){
+    padding: 30px;
+  }
+
+}
+
+div.full-image{
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
+  @include breakpoint(800){
+    height: 100vw;
+  }
+
+}
+
+div.image-1{
+  background-image: url(../images/photo-1.jpg);
+}
+
+div.image-2{
+  background-image: url(../images/photo-2.jpg);
+}
+
+div.image-3{
+  background-image: url(../images/photo-3.jpg);
+}
+
+
+
+
+
+
